@@ -7,7 +7,7 @@
     
     b) Conda: create and activate a conda env for this project:
 ```bash
-conda create -n {{cookiecutter.project_slug}} python=3.9
+conda create -n {{cookiecutter.project_slug}} python=3.10
 conda activate {{cookiecutter.project_slug}}
 ```
 
