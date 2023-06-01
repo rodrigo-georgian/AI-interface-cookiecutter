@@ -4,8 +4,9 @@ import dotenv
 import streamlit as st
 from langchain.chains import ConversationChain
 
-from {{cookiecutter.package_name}}.ai.agents import get_basic_conversation_chain, get_python_agent
-from {{cookiecutter.package_name}}.streamlit.agent_blocks import (
+from {{cookiecutter.package_name}}.ai.agents import get_python_agent
+from {{cookiecutter.package_name}}.ai.chains import get_basic_conversation_chain
+from {{cookiecutter.package_name}}.streamlit.llm_blocks import (
     llm_chatbot_st_block,
     llm_stdout_st_block,
 )
