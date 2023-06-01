@@ -1,4 +1,4 @@
-# Hackathon Package Template 
+# GenAI Intertace Package Template 
 
 ## Included
 - Package management with Poetry
@@ -16,7 +16,7 @@ pip install -r requirements
 
 ## Usage
 ```bash
-$ cookiecutter https://github.com/rodrigo-georgian/hackathon-template
+$ cookiecutter https://github.com/rodrigo-georgian/genai-intertace-cookiecutter
 ```
 
 ## Demos
