@@ -1,0 +1,13 @@
+{
+  "github_username": "developer-georgian",
+  "project_name": "Hackathon Package",
+  "project_slug": "{{ cookiecutter.project_name | slugify }}",
+  "package_name": "{{ cookiecutter.project_slug.replace('-', '_') }}",
+  "project_description": "Collaboration between Georgian and X company on Y topic",
+  "_copy_without_render": [
+    ".github/*"
+  ],
+  "_extensions": [
+    "cookiecutter.extensions.SlugifyExtension"
+  ]
+}
