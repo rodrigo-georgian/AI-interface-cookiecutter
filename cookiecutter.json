@@ -1,8 +1,8 @@
 {
   "github_username": "developer-georgian",
-  "project_name": "GenAI Intertace Package",
-  "project_slug": "{{ cookiecutter.project_name | slugify }}",
-  "package_name": "{{ cookiecutter.project_slug.replace('-', '_') }}",
+  "project_name": "GenAI Interface Package",
+  "project_slug": "{{cookiecutter.project_name | slugify }}",
+  "package_name": "{{cookiecutter.project_slug.replace('-', '_') }}",
   "project_description": "Collaboration between Georgian and X company on Y topic",
   "_copy_without_render": [
     ".github/*"
