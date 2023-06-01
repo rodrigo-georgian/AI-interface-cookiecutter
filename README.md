@@ -19,8 +19,10 @@ pip install -r requirements
 $ cookiecutter https://github.com/rodrigo-georgian/genai-intertace-cookiecutter
 ```
 
-## Demos
-- [Tutorial Video Link - V0 (requires georgian credentials)](https://drive.google.com/file/d/1id8nEth4sTRiXYfYsiij3kum2I8HqKav/view?usp=sharing)
-
+## Tests
+```
+make test
+```
 <!-- ### Todo
--  -->
+Add video tutorial
+--->

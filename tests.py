@@ -26,9 +26,7 @@ def run_package_tests(path):
 
 @pytest.fixture
 def baked_cookies(cookies):
-    result = cookies.bake(extra_context={"project_name": "GenAI Test Project"})
-    print(result._project_dir)
-    return result
+    return cookies.bake(extra_context={"project_name": "GenAI Test Project"})
 
 
 def test_bake_project(baked_cookies):
