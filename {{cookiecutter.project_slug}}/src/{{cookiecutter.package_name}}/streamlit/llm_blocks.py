@@ -7,7 +7,7 @@ from langchain.memory.chat_message_histories.in_memory import ChatMessageHistory
 from langchain.schema import AIMessage, HumanMessage
 from streamlit_chat import message
 
-from genai_app_template.streamlit.utils import (
+from {{cookiecutter.package_name}}.streamlit.utils import (
     catchtime,
     redirect_stdout_copy,
     render_stdout,

@@ -12,7 +12,14 @@ packages = [
 python = "^3.10"
 python-dotenv = "^1.0.0"
 jupyter = "^1.0.0"
-langchain = "^0.0.187"
+openai = "^0.27.6"
+langchain = "^0.0.170"
+huggingface = "^0.0.1"
+transforms = "^0.1"
+huggingface-hub = "^0.14.1"
+streamlit = "^1.22.0"
+streamlit-chat = "^0.0.2.2"
+ansi2html = "^1.8.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.0.0"
@@ -22,6 +29,7 @@ mypy = "^0.971"
 isort = "^5.9.3"
 flake8 = "^5.0.0"
 pytest-cov = "^3.0.0"
+streamlit-mock = "^0.0.1"
 coverage = {version = "^6.0.1", extras = ["toml"]}
 
 [tool.semantic_release]
