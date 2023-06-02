@@ -19,7 +19,7 @@ def get_python_agent_resource() -> Callable:
 
 
 def get_chatbot_resource() -> ConversationChain:
-    return get_basic_conversation_chain(model_name='gpt-4')
+    return get_basic_conversation_chain(model_name='gpt-3.5-turbo')
 
 
 # Streamlit App
