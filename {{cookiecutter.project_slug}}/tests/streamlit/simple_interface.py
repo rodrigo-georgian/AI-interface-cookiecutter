@@ -11,7 +11,7 @@ from {{cookiecutter.package_name}}.streamlit.llm_blocks import (
     llm_stdout_st_block,
 )
 
-dotenv.load_dotenv("../.env", override=True)
+dotenv.load_dotenv(".env", override=True)
 
 
 def get_python_agent_resource() -> Callable:
