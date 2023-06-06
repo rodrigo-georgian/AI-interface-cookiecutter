@@ -1,4 +1,4 @@
-# GenAI Intertace Package Template 
+# GenAI Interface Package Template 
 
 ## Included
 - Package management with Poetry
@@ -8,8 +8,8 @@
 - Tests with pytest, pytest-cov
 - CI with Github Actions
 
-## Dependancies
-- cookicutter:
+## Dependencies
+- cookiecutter:
 ```bash
 pip install -r requirements
 ```

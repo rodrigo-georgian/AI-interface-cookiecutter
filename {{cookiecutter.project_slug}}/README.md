@@ -15,16 +15,21 @@ conda activate {{cookiecutter.project_slug}}
 ```
 poetry install
 ```
-3. Check installation worked by running 
+
+3. Create private environment file (this will not be committed!)
+
+```
+cp .env-template .env
+```
+
+Add any necessary API keys to `.env` following the given format.
+
+4. Check installation worked by running 
 ```
 pytest .
 ```
 
-4. Create private environment file (this will not be committed!)
-```
-cp .env-template .env
-```
-Add any necessary API keys there following the given format.
+Note: To pass all tests, an OpenAI API key must be added to `.env`.
 
 # Demos
 Run `make demo` to see the main demo interface.
