@@ -16,7 +16,7 @@ pip install -r requirements
 
 ## Usage
 ```bash
-$ cookiecutter https://github.com/rodrigo-georgian/genai-intertace-cookiecutter
+$ cookiecutter https://github.com/rodrigo-georgian/genai-interface-cookiecutter
 ```
 
 ## Tests
