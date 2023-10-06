@@ -35,7 +35,7 @@ Note: To pass all tests, an OpenAI API key must be added to `.env`.
 Run `make demo` to see the main demo interface.
 You should see something like:
 ```
-poetry run streamlit run interfaces/demo-interface.py
+poetry run streamlit run interfaces/Home.py
 
   You can now view your Streamlit app in your browser.
 

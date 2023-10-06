@@ -11,6 +11,11 @@ def run_package_tests(path):
 
     # Create a temporary directory as the environment
     with tempfile.TemporaryDirectory() as temp_dir:
+
+        # uncomment this line to debug
+        from pathlib import Path
+        input(f'Created temp baked folder: {Path(temp_dir).parent}. Press key to exit...')
+
         # Create a virtual environment
         subprocess.check_call(["python3", "-m", "venv", temp_dir])
 
