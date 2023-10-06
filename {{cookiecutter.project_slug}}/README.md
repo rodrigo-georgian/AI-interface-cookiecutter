@@ -43,19 +43,11 @@ poetry run streamlit run interfaces/Home.py
   Network URL: http://XXX.XXX.X.XX:8000
 ```
 And after clicking the link above, should see something like this:
-![Screenshot](docs/imgs/demo-screenshot-1.png)
+![Screenshot](docs/imgs/home.png)
 
-Here are some example inputs to try!
-![Screenshot](docs/imgs/demo-screenshot-2.png)
-
-## Codespaces
-To easily share this demo with others, you can use [github codespaces](https://github.com/features/codespaces). To do this:
-
-1. Start a codespace from the github interface:
-![Screenshot](docs/imgs/codespaces-1.png)
-2. Follow the setup instructions in the VScode terminal (you can skip the conda env).
-3. Instead of `make demo`, use `make demo-spaces`
-4. Once you have the interface running, you can share it publicly by going to `Ports` in the VScode toolbar, right clicking on the streamlit port and setting `Port Visibility` to public. [More details here](https://docs.github.com/en/codespaces/developing-in-codespaces/forwarding-ports-in-your-codespace).
+# Deploy and Share
+To easily share this demo with others, you can use [streamlit-cloud](https://streamlit.io/cloud).
+[Here is]() a host example of the default app created by this repo.
 
 # Repo Info
 ## Poetry
