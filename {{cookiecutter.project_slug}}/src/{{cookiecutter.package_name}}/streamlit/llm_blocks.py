@@ -1,6 +1,8 @@
 
 import io
 from itertools import zip_longest
+import matplotlib.pyplot as plt
+import os
 
 import streamlit as st
 from langchain.chains import ConversationChain
@@ -75,14 +77,6 @@ def llm_stdout_st_block(name, func: callable, *args, **kwargs):
         with st.expander(f"{name} Response", expanded=True):
             render_stdout(st.session_state[std_out_var])
 
-
-# def chat_memory_st_block(chat_memory: ChatMessageHistory):
-#     for i, _message in enumerate(chat_memory.messages):
-#         if isinstance(_message, HumanMessage):
-#             message(_message.content, is_user=True, key=str(i) + "_user")
-#         elif isinstance(_message, AIMessage):
-#             message(_message.content, key=str(i))
-
 def chat_memory_st_block(chat_memory: ChatMessageHistory):
     for i, _message in enumerate(chat_memory.messages):
         if isinstance(_message, HumanMessage):
@@ -98,8 +92,6 @@ def chat_memory_st_block(chat_memory: ChatMessageHistory):
 
 
 def llm_chatbot_st_block(name, chatbot: ConversationChain):
-    name_var = name.lower().replace(" ", "_")
-
     st.header(f"{name}")
     
     if user_input := st.chat_input("Send to chatbot"):
@@ -110,3 +102,25 @@ def llm_chatbot_st_block(name, chatbot: ConversationChain):
     if len(chatbot.memory.chat_memory.messages) > 0:
         with st.expander(f"{name} Response", expanded=True):
             chat_memory_st_block(chatbot.memory.chat_memory)
+
+
+def plot_temp_chart():
+    if os.path.isfile('temp_chart.png'):
+        im = plt.imread('temp_chart.png')
+        st.image(im)
+        os.remove('temp_chart.png')
+
+
+def pandasai_qa_st_block(sdf):
+    with st.form("QA"):
+        st.subheader("Input")
+        question = st.text_input("", value="", type="default")
+        submitted = st.form_submit_button("Submit")
+        if submitted:
+            with st.spinner("Thinking... (See terminal for thought process)"):
+                x = sdf(question)
+                plot_temp_chart()
+
+                if x is not None:
+                    st.subheader("Output")
+                    st.write(x)
