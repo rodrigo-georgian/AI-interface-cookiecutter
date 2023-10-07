@@ -47,7 +47,7 @@ And after clicking the link above, should see something like this:
 
 # Deploy and Share
 To easily share this demo with others, you can use [streamlit-cloud](https://streamlit.io/cloud).
-[Here is]() a host example of the default app created by this repo.
+[Here is](https://rodrigo-georgian-ai-interface-example-interfaceshome-rj9c7e.streamlit.app/) a host example of the default app created by this repo.
 
 # Repo Info
 ## Poetry
