@@ -1,6 +1,17 @@
 # {{cookiecutter.project_name}}
 # Set Up
 
+0. Connect to remote repo
+  - Create repo in github web interface. Copy the add remote line (looks like this: `git remote add origin git@github.com:<your-github-handle>/<your-repo-name>.git`)
+  - In the root of the repo created by cookiecutter run: 
+    ```
+    rm -fR .git
+    git branch -M main
+    git remote add origin git@github.com:<your-github-handle>/<your-repo-name>.git
+    git add .
+    git commit -m "feat(.)/from template"
+    ```
+
 1. Environment management options
    
     a)  Poetry: ```poetry shell```
@@ -11,12 +22,12 @@ conda create -n {{cookiecutter.project_slug}} python=3.9.18
 conda activate {{cookiecutter.project_slug}}
 ```
 
-2. Install package
+1. Install package
 ```
 poetry install
 ```
 
-3. Create private environment file (this will not be committed!)
+1. Create private environment file (this will not be committed!)
 
 ```
 cp .env-template .env

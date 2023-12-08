@@ -76,6 +76,7 @@ def llm_stdout_st_block(name, func: callable, *args, **kwargs):
     if std_out_var in st.session_state:
         with st.expander(f"{name} Response", expanded=True):
             render_stdout(st.session_state[std_out_var])
+            
 
 def chat_memory_st_block(chat_memory: ChatMessageHistory):
     for i, _message in enumerate(chat_memory.messages):
@@ -109,18 +110,3 @@ def plot_temp_chart():
         im = plt.imread('temp_chart.png')
         st.image(im)
         os.remove('temp_chart.png')
-
-
-def pandasai_qa_st_block(sdf):
-    with st.form("QA"):
-        st.subheader("Input")
-        question = st.text_input("", value="", type="default")
-        submitted = st.form_submit_button("Submit")
-        if submitted:
-            with st.spinner("Thinking... (See terminal for thought process)"):
-                x = sdf(question)
-                plot_temp_chart()
-
-                if x is not None:
-                    st.subheader("Output")
-                    st.write(x)

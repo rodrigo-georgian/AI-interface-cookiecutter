@@ -4,7 +4,6 @@ Use this cookiecutter to get a GenAI Interface sample repo in under 10 seconds.
 The demo includes 3 interfaces:
  - A chatbot
  - A python agent
- - A PandasAI agent
 
 ![Chatbot]({{cookiecutter.project_slug}}/docs/imgs/chatbot.png)
 
